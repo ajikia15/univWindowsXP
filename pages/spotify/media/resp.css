@@ -1,0 +1,40 @@
+@media(max-width: 1000px) {
+    .small-album-list {
+        grid-template-columns: 1fr 1fr;
+    }
+    .big-album-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media(max-width: 800px) {
+    .main {
+        grid-template-columns: 0 3fr;
+    }
+    .main-nav-item h4,
+    .playlists {
+        display: none;
+    }
+    .big-album-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .music-player-info {
+        grid-template-columns: 1fr;
+    }
+    .music-player-names {
+        display: none;
+    }
+}
+@media(max-width: 500px) {
+    .main-nav-item,
+    ion-icon[name=document-text-outline],
+    ion-icon[name=musical-note-outline] {
+        display: none;
+    }
+    .small-album-list {
+        grid-template-columns: 1fr;
+    }
+    .big-album-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}

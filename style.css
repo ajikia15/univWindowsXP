@@ -1,0 +1,300 @@
+:root {
+    --tab: #004FE2;
+    --boxshadow: ;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0px 1px 2px black;
+}
+
+a {
+    text-decoration: none;
+}
+
+.pc1 {
+    position: relative;
+}
+
+.pc {
+    width: 100%;
+    background-image: url(./media/winxp.jpg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+/*         TASKBAR             */
+
+.taskbar {
+    box-shadow: var(--boxshadow);
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 23fr;
+    grid-template-rows: 33px;
+    background-color: var(--tab);
+    border-top: 3px ridge #2a6affd5;
+
+}
+
+#start {
+    background-color: #6edd6d;
+    border-radius: 0px 10px 10px 0px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+#start img {
+    width: 31px;
+    margin-right: 5px;
+}
+
+.wra {
+    color: #21428d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabs {
+    display: grid;
+    grid-template-columns: repeat(4, 3fr) 2fr;
+    grid-template-rows: 29px;
+    padding: 2px;
+    color: white;
+    gap: 20px;
+}
+
+.acttab {
+    padding: 3px;
+    box-shadow: rgba(150, 150, 250, 0.17) 0px -23px 25px 0px inset, rgba(182, 181, 250, 0.15) 0px -36px 30px 0px inset, rgba(178, 165, 252, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border-radius: 6px;
+    display: flex;
+}
+
+.acttab img,
+.time img {
+    width: 24px;
+}
+
+.t {
+    margin: 0px;
+}
+
+.time {
+    border-radius: 3px;
+    padding: 3px;
+    display: flex;
+    background-color: #0D9EF1;
+    justify-content: space-around;
+}
+
+/*           DESKTOP             */
+
+
+.desktop {
+    height: 90vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(7, 13vh);
+    text-align: center;
+    gap: 30px;
+    row-gap: 0px;
+    position: relative;
+}
+
+.placeholder,
+#placeholder {
+    grid-column: 3 / span 28;
+}
+
+#prog1 {
+    grid-column: 3 / span 26;
+}
+
+.prog,
+.prog1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    color: white;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.prog:hover {
+    background-color: #3467DD;
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.prog p,
+.prog1 p {
+    white-space: normal;
+    margin-top: 2px;
+    font-size: small;
+}
+
+.ico {
+    position: relative;
+}
+
+.ico img:nth-of-type(1) {
+    width: 41px;
+}
+
+.ico img:nth-of-type(2) {
+    width: 32px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+/* START MENU*/
+.startmenu {
+
+    position: absolute;
+    bottom: 0;
+    height: 80vh;
+    grid-template-rows: 11vh 57vh 12vh;
+    width: 35%;
+    border-radius: 5px;
+    background-color: var(--tab);
+    border: 3px ridge #2a6affd5;
+    color: white;
+    display: none;
+    /* dont forget to change*/
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.startMenuTop {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+#name {
+    margin: 0;
+    margin-left: 10px;
+    font-size: large;
+    font-weight: 500;
+}
+
+.pfp
+
+/* profile picture in start menu*/
+    {
+    width: 56px;
+    height: 56px;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.startMenuContent {
+    display: flex;
+    width: 100%;
+}
+
+.startHalf,
+.startHalf2 {
+    background-color: white;
+    width: 50%;
+    text-shadow: none;
+    font-weight: 500;
+}
+
+.startHalf2 {
+    background-color: #D3E5FB;
+    border-left: 2px solid #bed8fa;
+    display: grid;
+    grid-template-rows: repeat(7, 30px);
+    padding-top: 10px;
+    row-gap: 10px;
+
+}
+
+.startHalfProg {
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+}
+
+.startHalfProg p {
+    margin-left: 10px;
+    color: black;
+
+}
+
+.startHalfProg img {
+    width: 30px;
+    height: 30px;
+}
+
+.window {
+    display: none;
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    right: 25%;
+    bottom: 25%;
+    border-radius: 5px;
+    background-color: var(--tab);
+    margin: 1px;
+}
+
+.w1 {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.windowContent {
+    background-color: beige;
+    top: 4.5vh;
+    bottom: 4px;
+    right: 4px;
+    left: 4px;
+    position: absolute;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 5px;
+}
+
+.windowContr {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 5px;
+    padding-top: 1px;
+}
+
+.windowContr button {
+    border-radius: 3px;
+    width: 4vh;
+    height: 4vh;
+    color: white;
+    background-color: var(--tab);
+    border: 1px solid #6892df;
+}
+
+.windowContent iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#exit {
+    background-color: red;
+}

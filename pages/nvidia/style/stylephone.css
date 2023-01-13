@@ -1,0 +1,51 @@
+@media(max-width:800px) {
+    .teams {
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 100%;
+    }
+    #nvidiaInfo,
+    #amdInfo,
+    .comparisonsContent {
+        font-size: 1em;
+    }
+    .question {
+        font-size: 4rem;
+    }
+}
+
+@media(max-width:400px) {
+
+    #nvidiaInfo,
+    #amdInfo,
+    .comparisonsContent {
+        font-size: 0.8em;
+    }
+    .question {
+        font-size: 2rem;
+    }
+}
+
+/* animations*/
+@keyframes moveTeam {
+    0% {
+        background-position: left;
+    }
+
+    50% {
+        background-position: right;
+    }
+
+    100% {
+        background-position: center;
+    }
+}
+
+@keyframes dimStart {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
