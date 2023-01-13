@@ -1,0 +1,91 @@
+:root {
+    --orange: #F25022;
+    --green: #7FBA00;
+    --blue: #00A4EF;
+    --yellow: #FFB900;
+}
+
+body {
+    margin: 0;
+}
+
+.window {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.pane1 {
+    width: 50%;
+    height: 50%;
+    display: flex;
+
+    position: relative;
+}
+
+.pane1 div {
+    width: 45vh;
+    height: 45vh;
+
+    position: absolute;
+}
+
+.pane1:hover .orange {
+    width: 70vw;
+    height: 85vh;
+    transform: translate(50%, 50%);
+    transition: all 0.5s;
+    z-index: 10;
+}
+
+.pane1:hover .green {
+    width: 70vw;
+    height: 85vh;
+    transform: translate(-50%, 50%);
+    transition: all 0.5s;
+    z-index: 10;
+}
+
+.pane1:hover .blue {
+    width: 70vw;
+    height: 85vh;
+    transform: translate(50%, -50%);
+    transition: all 0.5s;
+    z-index: 10;
+}
+
+
+.pane1:hover .yellow {
+    width: 70vw;
+    height: 85vh;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+    z-index: 10;
+
+}
+
+.orange {
+    background-color: var(--orange);
+    bottom: 1vh;
+    right: 1vh;
+}
+
+.green {
+    background-color: var(--green);
+    bottom: 1vh;
+    left: 1vh;
+}
+
+.blue {
+    background-color: var(--blue);
+    top: 1vh;
+    right: 1vh;
+}
+
+.yellow {
+    background-color: var(--yellow);
+    top: 1vh;
+    left: 1vh;
+}

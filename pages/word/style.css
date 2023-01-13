@@ -1,0 +1,520 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+:root {
+    --orange: #F25022;
+    --green: #7FBA00;
+    --blue: #00A4EF;
+    --yellow: #FFB900;
+    --color: #E6E4B7;
+}
+
+.intro {
+    width: 100%;
+    height: 100vh;
+
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.introBackground {
+    animation: colorRoulette 6s linear forwards;
+    /*!!!!!!!!!!!*/
+    animation-timing-function: steps(1);
+    animation-iteration-count: 1;
+    z-index: 3;
+
+    left: 0;
+    position: absolute;
+    display: grid;
+    width: 100%;
+    height: 100%;
+}
+
+.dis {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -150%);
+    color: var(--color);
+    font-size: 6vw;
+
+    animation: disappear 1s linear forwards;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+}
+
+.app {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -150%);
+    color: var(--color);
+    font-size: 6vw;
+    opacity: 0;
+
+    animation: appear 1.5s linear forwards;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate(-50%, -100%);
+
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}
+
+@keyframes colorRoulette {
+    0% {
+        background-color: var(--orange);
+    }
+
+    25% {
+        background-color: var(--green);
+
+    }
+
+    50% {
+        background-color: var(--blue);
+
+    }
+
+    75% {
+        background-color: var(--yellow);
+    }
+
+    99% {
+        z-index: 3;
+    }
+
+    100% {
+        z-index: 0;
+    }
+}
+
+/*/ // /////////////// WINDOWS ICON ////////////////*/
+.microSplit {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    z-index: 2;
+    background-color: #333;
+    /* 
+    animation-name: appear;
+    animation-delay: 6s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1; */
+}
+
+
+.microSplit > * {
+    width: 50%;
+    height: 50%;
+    display: flex;
+
+    position: relative;
+}
+
+.orange,
+.green,
+.blue,
+.yellow {
+    width: 45vh;
+    height: 45vh;
+
+    position: absolute;
+    box-sizing: border-box;
+}
+
+/* .paneOrange:hover {
+    transform: translate(70%, 85%);
+    transition: all 0.5s;
+    z-index: 10;
+} 
+.paneGreen:hover {
+    transform: translate(-70%, 85%);
+    transition: all 0.5s;
+    z-index: 10;
+}
+
+.paneGreen:hover .green {
+    width: 70vw;
+    height: 85vh;
+
+    color: white;
+}
+*/
+
+.orange {
+    background-color: var(--orange);
+    color: var(--orange);
+    bottom: 1vh;
+    right: 1vh;
+}
+
+.orange .contents {
+    font-size: 2vw;
+}
+
+
+.green {
+    background-color: var(--green);
+    color: var(--green);
+    bottom: 1vh;
+    left: 1vh;
+}
+
+.paneOrange:hover .orange {
+    animation: paneAppearOrange 0.5s linear forwards;
+    z-index: 10;
+
+    color: white;
+}
+
+
+.paneGreen:hover .green {
+    animation: paneAppearGreen 0.5s linear forwards;
+    z-index: 10;
+
+    color: white;
+}
+
+.paneBlue:hover .blue {
+    animation: paneAppearBlue 0.5s linear forwards;
+    z-index: 10;
+
+    color: white;
+}
+
+.paneYellow:hover .yellow {
+    animation: paneAppearYellow 0.5s linear forwards;
+    z-index: 10;
+
+    color: white;
+}
+
+@keyframes paneAppearOrange {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(50%, 50%);
+        width: 70vw;
+        height: 85vh;
+    }
+}
+
+@keyframes paneAppearGreen {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-50%, 50%);
+        width: 70vw;
+        height: 85vh;
+    }
+}
+
+@keyframes paneAppearBlue {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(50%, -50%);
+        width: 70vw;
+        height: 85vh;
+    }
+}
+
+@keyframes paneAppearYellow {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+        width: 70vw;
+        height: 85vh;
+    }
+}
+
+
+.contents * {
+    margin: 0;
+}
+
+
+.paneOrange:hover .contents,
+.paneGreen:hover .contents,
+.paneBlue:hover .contents,
+.paneYellow:hover .contents {
+    opacity: 1;
+}
+
+
+.blue {
+    background-color: var(--blue);
+    color: var(--blue);
+    top: 1vh;
+    right: 1vh;
+
+}
+
+.blueText,
+.blueText1 {
+    display: grid;
+    place-items: center;
+    font-size: 2vw;
+    margin-top: 30px;
+
+}
+
+.blue .contents div:nth-of-type(2) p {
+    font-size: 5vw;
+    margin-top: 60px;
+
+}
+
+.blueText p,
+.blueText1 p {
+    opacity: 0;
+}
+
+.paneBlue:hover .blueText p,
+.paneBlue:hover .blueText1 p {
+    animation: cardShow 1s linear forwards;
+}
+
+.paneBlue:hover .blueText p:nth-of-type(1) {
+    animation-delay: 0.1s;
+}
+
+.paneBlue:hover .blueText p:nth-of-type(2) {
+    animation-delay: 2.1s;
+}
+
+.paneBlue:hover .blueText p:nth-of-type(3) {
+    animation-delay: 4.1s;
+}
+
+.paneBlue:hover .blueText1 p {
+    animation-delay: 6.1s;
+}
+
+.yellow {
+    background-color: var(--yellow);
+    color: var(--yellow);
+    top: 1vh;
+    left: 1vh;
+    display: grid;
+    place-items: center;
+}
+
+.yellowText {
+    opacity: 0;
+    font-size: 5vw;
+}
+
+.paneYellow:hover .yellowText {
+    opacity: 1;
+}
+
+.contents {
+    opacity: 0;
+
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 10vh 10vh 10vh;
+}
+
+.conText {
+    display: grid;
+    place-items: center;
+    font-size: 2.3vw;
+
+}
+
+.paneGreen:hover .conText {
+    animation: cardShow 1s linear forwards;
+    opacity: 0;
+}
+
+.cards {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, 0.5fr);
+    column-gap: 10px;
+    margin-top: 30px;
+}
+
+
+.cards div {
+    background-color: rgba(248, 229, 165, 0.4);
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+
+.cardArrow {
+    display: grid;
+    place-items: center;
+    margin-top: 17vh;
+}
+
+.cardArrow img {
+    width: 7vw;
+    opacity: 0.7;
+}
+
+.cards div p {
+    white-space: normal;
+    margin-top: 2px;
+    font-size: small;
+    text-align: center;
+}
+
+.ico img {
+    width: 7vw;
+    margin: 10px;
+}
+
+
+.paneGreen:hover .card1,
+.paneGreen:hover .card2,
+.paneGreen:hover .card3,
+.paneGreen:hover .card4,
+.paneGreen:hover .card5,
+.paneGreen:hover .card6,
+.paneGreen:hover .card7,
+.paneGreen:hover .card8,
+.paneGreen:hover .cardArrow {
+    opacity: 0;
+    animation: cardShow 0.5s linear forwards;
+}
+
+.paneGreen:hover .card1 {
+    animation-delay: 1s;
+}
+
+.paneGreen:hover .card2 {
+    animation-delay: 2s;
+}
+
+.paneGreen:hover .card3 {
+    animation-delay: 3s;
+}
+
+.paneGreen:hover .card4 {
+    animation-delay: 4s;
+}
+
+.paneGreen:hover .card5 {
+    animation-delay: 1.5s;
+}
+
+.paneGreen:hover .card6 {
+    animation-delay: 2.5s;
+}
+
+.paneGreen:hover .card7 {
+    animation-delay: 3.5s;
+}
+
+.paneGreen:hover .card8 {
+    animation-delay: 4.5s;
+}
+
+.paneGreen:hover .cardArrow {
+    animation-delay: 2.5s;
+}
+
+@keyframes cardShow {
+    0% {
+        filter: blur(5px);
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateY(-0px);
+
+    }
+}
+
+.linImg {
+    display: grid;
+    place-items: center;
+}
+
+.linImgContainer {
+    margin-top: 120px;
+    width: 30vw;
+    height: 25vh;
+    background-image: url('./media/linux.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0;
+
+
+}
+
+.paneBlue:hover .linImgContainer {
+    animation: jumping 3s ease forwards;
+    animation-delay: 6.5s;
+
+}
+
+@keyframes jumping {
+    0% {
+        opacity: 0;
+        transform: translateX(-2000px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateX(30px);
+    }
+
+    80% {
+        transform: translateX(-6px);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+
+    }
+}
