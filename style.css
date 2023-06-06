@@ -125,7 +125,7 @@ a {
     grid-column: 3 / span 26;
 }
 
-.prog,
+/*.prog,
 .prog1 {
     display: grid;
     grid-template-columns: 1fr;
@@ -133,7 +133,7 @@ a {
     margin-left: 10px;
     margin-top: 10px;
 }
-
+*/
 .prog:hover {
     background-color: #3467DD;
     box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
